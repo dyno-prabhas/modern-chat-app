@@ -1,7 +1,7 @@
 import { Client, TablesDB } from "react-native-appwrite";
 
 
-if (!process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID) {
+if (!process.env.EXPO_APPWRITE_PROJECT_ID) {
   throw new Error("EXPO_PUBLIC_APPWRITE_PROJECT_ID is not set");
 }
 
@@ -10,7 +10,7 @@ if (!process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID) {
  */
 const appwriteConfig = {
   endpoint: "https://cloud.appwrite.io/v1",
-  projectId: process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID!,
+  projectId: process.env.EXPO_APPWRITE_PROJECT_ID!,
   platform: "com.abboss.modernchatapp",
   db: "68b55c570033a129ee3b",
   col: {
